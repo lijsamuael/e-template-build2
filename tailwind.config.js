@@ -1,18 +1,86 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+    },
+    screens: {
+      ssm: "475px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+
+    colors: {
+      primary: {
+        normal: "#FFDE59",
+        light1: "#ffffe6",
+        light2: "#ffffcc",
+        light3: "#ffffb3",
+        light4: "#ffff99",
+        dark1: "#ffff80",
+        dark2: "#ffff66",
+        dark3: "#ffff4d",
+        dark4: "#ffff00",
+      },
+      secondary: {
+        normal: "#1E3A8A",
+        light1: "#E0F2FE",
+        light2: "#E0F2FE",
+        light3: "#93C5FD",
+        light4: "#60A5FA",
+        dark1: "#3B82F6",
+        dark2: "#3B82F6",
+        dark3: "#1D4ED8",
+        dark4: "#1E40AF",
+      },
+      gray: {
+        normal: "#0F172A",
+        light1: "#F1F5F9",
+        light2: "#E2E8F0",
+        light3: "#CBD5E1",
+        light4: "#94A3B8",
+        dark1: "#64748B",
+        dark2: "#475569",
+        dark3: "#334155",
+        dark4: "#1E293B",
+      },
+      warning: {
+        normal: "#7C2D12",
+        light1: "#FFEDD5",
+        light2: "#FED7AA",
+        light3: "#FDBA74",
+        light4: "#FDBA74",
+        dark1: "#F97316",
+        dark2: "#EA580C",
+        dark3: "#C2410C",
+        dark4: "#9A3412",
+      },
+      success: {
+        normal: "#365314",
+        light1: "#ECFCCB",
+        light2: "#D9F99D",
+        light3: "#D9F99D",
+        light4: "#A3E635",
+        dark1: "#84CC16",
+        dark2: "#65A30D",
+        dark3: "#4D7C0F",
+        dark4: "#3F6212",
+      },
+      black: "#000000",
+      white: "#ffffff",
     },
   },
   plugins: [],
-}
+};
