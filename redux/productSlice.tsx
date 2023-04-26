@@ -16,7 +16,7 @@ function removeObjectWithId(arr: any, id: number) {
   return arr;
 }
 
-const initialState: ProductType[] = data.shirts;
+const initialState: ProductType[] = data.product;
 
 export const productSlice = createSlice({
   name: "productReducer",

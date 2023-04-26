@@ -1,4 +1,5 @@
 export default interface ProductType{
+    "type"?: string,
     "id"?:number
     "name": string,
     "image": string,
@@ -9,3 +10,11 @@ export default interface ProductType{
     "rating": boolean,
     "sizes"?: string[]
 }
+
+export interface Products {
+    shirts: ProductType[];
+  }
+  
+  export interface Data {
+    products: Products[];
+  }
