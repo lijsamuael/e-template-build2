@@ -1,12 +1,19 @@
+"use client";
+
 import Carousel from "@/components/product/carousel";
 import data from "../model/data.json";
 import Card from "@/components/product/card";
 
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./store";
+
 export default function HomePage() {
+  const products = useSelector((state: RootState) => state.products);
+
   return (
     <div className=" pb-8">
       <Carousel heading="New Arrivals">
-        {data.shirts.map((shirt, index, array) => (
+        {products.map((shirt, index, array) => (
           <Card
             key={index}
             name={shirt.name}
