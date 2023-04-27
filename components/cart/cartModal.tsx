@@ -5,14 +5,11 @@ import Link from "next/link";
 
 import data from "../../model/cart.json";
 import CartItem from "./cardItem";
+import ProductType from "@/interface/product";
 
 interface CartModalProps {
   cartState: boolean;
-  image: string;
-  price: number;
-  name: string;
-  color: string;
-  sizes: string[];
+  card: ProductType;
   closeCartAction: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -22,10 +19,8 @@ export default function CartModal(props: CartModalProps) {
   ) {
     props.closeCartAction(event);
   }
-  const { cartState, image, price, name, color, sizes } = props;
-  let total = 0;
-  data.cart.map((item) => (total += item.price));
-  total += price;
+  const { cartState, card } = props;
+
   return (
     <>
       {cartState && (
@@ -41,26 +36,15 @@ export default function CartModal(props: CartModalProps) {
             {data.cart.map((item, index) => (
               <CartItem
                 key={index}
-                title={item.name}
-                image={item.image}
-                color={item.color}
-                price={item.price}
-                size={item.size}
+                cards={[card]}
                 quantity={item.quantity}
               ></CartItem>
             ))}
-            <CartItem
-              title={name}
-              image={image}
-              color={color}
-              price={price}
-              size={"XL"}
-              quantity={1}
-            ></CartItem>
+            <CartItem cards={[card]} quantity={1}></CartItem>
             <div className="space-y-2 text-center">
               <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold ">Total</p>
-                <p className="text-xl font-semibold">${total} USD</p>
+                <p className="text-xl font-semibold">${} USD</p>
               </div>
               <Link href="payment">
                 <button className="w-full py-2  border-2 border-black bg-secondary-dark3 text-white text-xs">

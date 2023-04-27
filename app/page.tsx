@@ -25,6 +25,7 @@ export default function HomePage() {
                 price={shirt.price}
                 color={shirt.color}
                 rating={shirt.rating}
+                sizes={shirt.sizes}
               />
             )
         )}
@@ -41,6 +42,8 @@ export default function HomePage() {
                 price={short.price}
                 color={short.color}
                 rating={short.rating}
+                sizes={short.sizes}
+
               />
             )
         )}
@@ -57,6 +60,8 @@ export default function HomePage() {
                 price={best.price}
                 color={best.color}
                 rating={best.rating}
+                sizes={best.sizes}
+
               />
             )
         )}
