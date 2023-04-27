@@ -84,7 +84,6 @@ export default function Card(product: ProductType) {
       )}
       {isCartOpen && (
         <CartModal
-          card={product}
           closeCartAction={handleCartClose}
           cartState={isCartOpen}
         />

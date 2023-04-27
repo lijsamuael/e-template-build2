@@ -2,8 +2,12 @@
 
 import Link from "next/link";
 import { MouseEventHandler, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { changeQuantity } from "@/redux/productSlice";
+
 import CloseIcon from "../icons/close";
 import ProductType from "@/interface/product";
+import { addToCart } from "@/redux/cartSlice";
 
 interface CardModalProps {
   modalState: boolean;
@@ -19,6 +23,7 @@ export default function CardModal(props: CardModalProps) {
   function handleCartOpen(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
+    dispatch(addToCart(card));
     props.openCartAction(event);
   }
   const { modalState, card } = props;
@@ -28,6 +33,12 @@ export default function CardModal(props: CardModalProps) {
   const handleSizeChange = (event: any) => {
     setSelectedSize(event.target.value);
   };
+
+  const handleQuantityChange = (event: any) => {
+    dispatch(changeQuantity(event.target.value));
+  };
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -57,9 +68,16 @@ export default function CardModal(props: CardModalProps) {
                   <p className="pt-4">${card.price}</p>
                   <p className="font-bold">QUANTITY</p>
                   <input
-                    placeholder="1 "
+                    // placeholder={card.quantity.toString()}
+                    placeholder="1"
                     type="text"
                     className="border border-gray-400 w-12 px-2 py-1"
+                    onChange={(e) => {
+                      const newQuantity = parseInt(e.target.value);
+                      dispatch(
+                        changeQuantity({ id: card.id, quantity: newQuantity })
+                      );
+                    }}
                   />
                 </div>
                 <div className="flex flex-col space-x-2 ">

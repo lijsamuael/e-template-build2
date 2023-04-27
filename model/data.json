@@ -10,7 +10,8 @@
       "price": 59.0,
       "color": "red-700",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL", "XLL"]
+      "sizes": ["S", "M", "L", "XL", "XLL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -22,7 +23,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -34,7 +36,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L"]
+      "sizes": ["S", "M", "L"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -46,7 +49,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -58,7 +62,8 @@
       "price": 59.0,
       "color": "red-700",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -70,7 +75,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -82,7 +88,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -94,7 +101,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -106,7 +114,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -118,7 +127,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -130,7 +140,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -142,7 +153,8 @@
       "price": 59.0,
       "color": "red-700",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -154,7 +166,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -166,7 +179,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "shirt",
@@ -178,7 +192,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
 
     {
@@ -191,7 +206,8 @@
       "price": 59.0,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -203,7 +219,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -215,7 +232,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -227,7 +245,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -239,7 +258,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -251,7 +271,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -263,7 +284,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -275,7 +297,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -287,7 +310,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "short",
@@ -299,7 +323,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
 
     {
@@ -312,7 +337,8 @@
       "price": 59.0,
       "color": "black",
       "rating": true,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "best",
@@ -324,7 +350,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "best",
@@ -336,7 +363,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     },
     {
       "type": "best",
@@ -348,7 +376,8 @@
       "price": 23.87,
       "color": "black",
       "rating": false,
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": ["S", "M", "L", "XL"],
+      "quantity": 1
     }
   ]
 }

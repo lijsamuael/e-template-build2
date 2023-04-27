@@ -18,6 +18,9 @@ export default function HomePage() {
             shirt.type === "shirt" && (
               <Card
                 key={index}
+                id={shirt.id}
+                type={shirt.type}
+                quantity={shirt.quantity}
                 name={shirt.name}
                 image={shirt.image}
                 tag={shirt.tag}
@@ -36,6 +39,9 @@ export default function HomePage() {
             short.type === "short" && (
               <Card
                 key={index}
+                id={short.id}
+                type={short.type}
+                quantity={short.quantity}
                 name={short.name}
                 image={short.image}
                 tag={short.tag}
@@ -43,7 +49,6 @@ export default function HomePage() {
                 color={short.color}
                 rating={short.rating}
                 sizes={short.sizes}
-
               />
             )
         )}
@@ -54,6 +59,9 @@ export default function HomePage() {
             best.type === "best" && (
               <Card
                 key={index}
+                id={best.id}
+                type={best.type}
+                quantity={best.quantity}
                 name={best.name}
                 image={best.image}
                 tag={best.tag}
@@ -61,7 +69,6 @@ export default function HomePage() {
                 color={best.color}
                 rating={best.rating}
                 sizes={best.sizes}
-
               />
             )
         )}

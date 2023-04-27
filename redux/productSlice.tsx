@@ -28,8 +28,20 @@ export const productSlice = createSlice({
     removeProduct: (state, action: PayloadAction<number>) => {
       removeObjectWithId(state, action.payload);
     },
-  },
+    changeQuantity: (
+      state,
+      action: PayloadAction<{ id: number; quantity: number }>
+    ) => {
+      const index = state.findIndex(
+        (product) => product.id === action.payload.id
+      );
+
+      if (index !== -1) {
+        state[index].quantity = action.payload.quantity;
+      }
+    },
+  }
 });
 
-export const { addProduct, removeProduct } = productSlice.actions;
+export const { addProduct, removeProduct, changeQuantity } = productSlice.actions;
 export default productSlice.reducer;
