@@ -1,3 +1,4 @@
+"use client";
 import { CartType } from "@/interface/cart";
 import ProductType from "@/interface/product";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
@@ -110,6 +111,13 @@ const cartSlice = createSlice({
   },
 });
 
-export const { increement, decreement, addToCart, remove, selectSize, selectColor  } = cartSlice.actions;
+export const {
+  increement,
+  decreement,
+  addToCart,
+  remove,
+  selectSize,
+  selectColor,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -19,7 +19,12 @@ interface CardModalProps {
 
 export default function CardModal(props: CardModalProps) {
   function handleClose(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    props.closeAction(event);
+    if (
+      (event.target as HTMLElement).id === "container" ||
+      (event.target as HTMLElement).id === "closeButton"
+    ) {
+      props.closeAction(event);
+    }
   }
   function handleCartOpen(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -46,11 +51,19 @@ export default function CardModal(props: CardModalProps) {
   return (
     <>
       {modalState && (
-        <div className=" text-secondary-normal fixed z-10 top-0 left-0 bg-gray-dark2 h-screen w-full flex items-start justify-end gap-x-4 bg-opacity-40">
+        <button
+          id="container"
+          onClick={handleClose}
+          className=" text-secondary-normal fixed z-10 top-0 left-0 bg-gray-dark2 h-screen w-full flex items-start justify-end gap-x-4 bg-opacity-40"
+        >
           <div className="flex flex-col lf-end justify-between overflow-y-auto top-0 w-[380px] bg-white h-screen  space-y-4  ">
             <div className="px-4 flex flex-col gap-y-12">
-              <button className="self-end pt-4 w-12 " onClick={handleClose}>
-                <div className="p-1 bg-black w-8 rounded-lg ">
+              <button
+                id="closeButton"
+                className="self-end pt-4 w-12 "
+                onClick={handleClose}
+              >
+                <div className="p-1 bg-secondary-dark3 w-8 rounded-lg ">
                   <CloseIcon />
                 </div>
               </button>
@@ -66,8 +79,8 @@ export default function CardModal(props: CardModalProps) {
                 </div>
               </div>
 
-              <div className="space-y-6 pt-2">
-                <div className="space-y-2">
+              <div className="p flex flex-col items-start gap-y-6 pt-2">
+                <div className="space-y-2 flex flex-col items-start">
                   <p className="pt-4">${card.price}</p>
                   <p className="font-bold">QUANTITY</p>
                   <input
@@ -83,8 +96,8 @@ export default function CardModal(props: CardModalProps) {
                     }}
                   />
                 </div>
-                <div className="flex flex-col space-x-2 ">
-                  <div className="flex items-center gap-x-2">
+                <div className="flex flex-col items-start space-x-2 ">
+                  <div className="flex items-center justify-start gap-x-2">
                     <p className="font-bold">COLOR</p>{" "}
                     <span className="text-xs text-secondary-dark2">
                       SEA FOAM
@@ -94,7 +107,7 @@ export default function CardModal(props: CardModalProps) {
                     className={`w-6 h-6 border border-black rounded-full bg-${card.color}`}
                   ></div>
                 </div>
-                <div className="">
+                <div className="flex flex-col items-start">
                   <p className="font-bold">SIZE</p>
                   <div className="flex gap-x-6">
                     {card.sizes.map((size, index) => (
@@ -123,7 +136,7 @@ export default function CardModal(props: CardModalProps) {
                 </div>
               </div>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 px-2">
               <button
                 className="mb-2 w-full py-1 text-center border-2 border-black"
                 onClick={handleCartOpen}
@@ -132,7 +145,7 @@ export default function CardModal(props: CardModalProps) {
               </button>
             </div>
           </div>
-        </div>
+        </button>
       )}
       {}
     </>

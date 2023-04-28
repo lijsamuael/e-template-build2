@@ -6,7 +6,7 @@ import AddedItems from "./addedItems";
 import ProductType from "@/interface/product";
 
 export default function PaymentItemList() {
-  const cart = useSelector((state: RootState) => state.cart);
+  const order = useSelector((state: RootState) => state.order);
   const products = useSelector((state: RootState) => state.products);
 
   const selectedItems: ProductType[] = [];
@@ -24,7 +24,7 @@ export default function PaymentItemList() {
 
   return (
     <div className="flex flex-col  p-4 space-y-2 max-w-[540px] ">
-      {cart.cartItems.map((item, index) => (
+      {order.orderItems.map((item, index) => (
         <AddedItems key={index} cartItem={item} isNew={false} />
       ))}
       <h4 className="text-center pt-4 lg:pt-2">ADD THIS NEW ARRIVALS!</h4>
@@ -48,7 +48,7 @@ export default function PaymentItemList() {
       <div className="flex flex-col  py-4 px-2 gap-y-2 border-b">
         <div className="flex justify-between">
           <p>Subtotal</p>
-          <p>${cart.totalPrice.toFixed(2)}</p>
+          <p>${order.totalPrice.toFixed(2)}</p>
         </div>
         <div className="flex justify-between">
           <div className="flex justify-between gap-x-2 items-center">
@@ -62,7 +62,7 @@ export default function PaymentItemList() {
         <p>Total</p>
         <div className="flex gap-x-2 items-center">
           <p className="text-xs">USD</p>
-          <span className="font-semibold">${cart.totalPrice.toFixed(2)}</span>
+          <span className="font-semibold">${order.totalPrice.toFixed(2)}</span>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function PaymentForm() {
 
   return (
     <div className="flex flex-col items-center space-y-8 lg:max-w-[660px]   lg:ml-auto">
-      <img src="./imgs/logo.png" alt="" />
+      <img src="./images/logo.png" alt="" />
       <ShowOrderSummaryTag />
       <HeaderLink />
       <div className="flex flex-col lg:hidden w-full">

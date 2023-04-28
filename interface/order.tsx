@@ -1,3 +1,11 @@
+
+import ProductType from "../interface/product"
+
+export interface OrderType{
+    orderItems: ProductType[],
+    totalPrice: number,
+    amount: number
+}
 export interface InputItem {
   name: string;
   inputType: string;
@@ -14,6 +22,6 @@ export interface InputSection {
   heading: InputItem[];
 }
 
-export default interface FormInputs {
+export  interface FormInputs {
   inputs: InputSection[];
 }

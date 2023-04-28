@@ -28,8 +28,8 @@ export default function CartItem({
                   />
                 </div>
               </div>
-              <div className="w-1/3 space-y-3 self-center">
-                <div>
+              <div className="flex flex-col items-start w-1/3 space-y-3 self-center">
+                <div className="flex flex-col items-start">
                   <p>
                     {card.color} / {card.sizes[0]}
                   </p>
