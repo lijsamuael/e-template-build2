@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartModal from "../cart/cartModal";
 import CardModal from "./cardModal";
 import ProductType from "@/interface/product";
@@ -22,6 +22,14 @@ export default function Card(product: ProductType) {
     setIsOpen(false);
     setCarIsOpen(false);
   }
+
+  useEffect(() => {
+    if (isCartOpen || isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isCartOpen, isOpen]);
 
   return (
     <>
@@ -83,10 +91,7 @@ export default function Card(product: ProductType) {
         />
       )}
       {isCartOpen && (
-        <CartModal
-          closeCartAction={handleCartClose}
-          cartState={isCartOpen}
-        />
+        <CartModal closeCartAction={handleCartClose} cartState={isCartOpen} />
       )}
     </>
   );

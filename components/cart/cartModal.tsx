@@ -60,19 +60,19 @@ export default function CartModal(props: CartModalProps) {
                 quantity={cart.amount}
               ></CartItem>
             </div>
-            <div className="space-y-2 text-center">
+            <div className="fixed bottom-0 bg-white w-[360px] pt-2 space-y-2 text-center">
               <div className="flex justify-between items-center">
                 <p className="text-2xl font-bold ">Total</p>
                 <p className="text-xl font-semibold">
                   ${cart.totalPrice.toFixed(2)} USD
                 </p>
               </div>
-              <Link href="payment">
+              <Link className="" href="/payment">
                 <button
                   onClick={() => dispatch(addToOrder(cart))}
-                  className="w-full py-2  border-2 border-black bg-secondary-dark3 text-white text-xs"
+                  className="mb-2 w-full py-2  border-2 border-black bg-secondary-dark3 text-white text-xs"
                 >
-                  CHECKOUT
+                  <button onClick={handleCartClose}>CHECKOUT</button>
                 </button>
               </Link>
             </div>
