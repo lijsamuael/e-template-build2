@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MouseEventHandler, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeQuantity } from "@/redux/productSlice";
+import { selectSize } from "@/redux/cartSlice";
 
 import CloseIcon from "../icons/close";
 import ProductType from "@/interface/product";
@@ -28,14 +29,16 @@ export default function CardModal(props: CardModalProps) {
   }
   const { modalState, card } = props;
 
-  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedSize, setSelectedSize] = useState(card.sizes);
 
   const handleSizeChange = (event: any) => {
     setSelectedSize(event.target.value);
-  };
-
-  const handleQuantityChange = (event: any) => {
-    dispatch(changeQuantity(event.target.value));
+    dispatch(
+      selectSize({
+        id: card.id,
+        size: event.toString().split(" "),
+      })
+    );
   };
 
   const dispatch = useDispatch();
@@ -101,13 +104,14 @@ export default function CardModal(props: CardModalProps) {
                           className="sr-only"
                           name="size"
                           value={size}
-                          checked={selectedSize === size}
+                          checked={selectedSize[0] === size}
                           onChange={handleSizeChange}
+                          //
                         />
                         <span
                           className={`font-semibold flex items-center justify-center border border-gray-600 h-12 w-12 text-xs ${
-                            selectedSize === size
-                              ? "border-4 border-indigo-500"
+                            selectedSize[0] === size
+                              ? "border-4 border-secondary-dark3"
                               : ""
                           }`}
                         >
