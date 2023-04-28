@@ -119,14 +119,13 @@ export default function CardModal(props: CardModalProps) {
                           value={size}
                           checked={selectedSize[0] === size}
                           onChange={handleSizeChange}
-                          //
+                        //
                         />
                         <span
-                          className={`font-semibold flex items-center justify-center border border-gray-600 h-12 w-12 text-xs ${
-                            selectedSize[0] === size
-                              ? "border-4 border-secondary-dark3"
-                              : ""
-                          }`}
+                          className={`font-semibold flex items-center justify-center border border-gray-600 h-12 w-12 text-xs ${selectedSize[0] === size
+                            ? "border-4 border-secondary-dark3"
+                            : ""
+                            }`}
                         >
                           <label htmlFor={`size-${index}`}>{size}</label>
                         </span>
@@ -147,7 +146,7 @@ export default function CardModal(props: CardModalProps) {
           </div>
         </button>
       )}
-      {}
+      { }
     </>
   );
 }
