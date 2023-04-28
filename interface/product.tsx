@@ -2,14 +2,14 @@ export default interface ProductType {
   type: string;
   id: number;
   name: string;
-  image: string;
+  img: string;
   tag: boolean;
   tagName?: string;
   price: number;
   color: string;
   rating: boolean;
   sizes: string[];
-  quantity: number
+  quantity: number;
 }
 
 export interface Products {

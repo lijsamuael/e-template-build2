@@ -3,7 +3,7 @@ import PaymentItemList from "@/components/payment/paymentItemList";
 
 export default function Payment() {
   return (
-    <div className=" font-sans flex   gap-x-16 w-full ">
+    <div className=" font-mono flex   gap-x-16 w-full overflow-hidden">
       <div className=" pt-16 bg-white w-full lg:w-[55%] items-center lg:flex-none pl-[5%] sm:pl-[10%] lg:pl-[2%] ">
         <PaymentForm />
       </div>

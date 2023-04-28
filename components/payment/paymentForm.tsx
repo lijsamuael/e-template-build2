@@ -1,21 +1,45 @@
+"use client";
 import Link from "next/link";
 import AdressForm from "./adressForm";
 import Checkouts from "./checkouts";
 import ContactInfo from "./contactInfo";
 import HeaderLink from "./headerLink";
-import NewArivals from "./newArrivals";
 import Policies from "./policies";
 import PosterMark from "./posterMark";
 import ShowOrderSummaryTag from "./showOrderSummaryTag";
+import AddedItems from "./addedItems";
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/store";
+import ProductType from "@/interface/product";
 
 export default function PaymentForm() {
+  const products = useSelector((state: RootState) => state.products);
+
+  const selectedItems: ProductType[] = [];
+
+  const shirts = products.filter((item) => item.type === "shirt");
+  const numShirts = shirts.length;
+
+  while (selectedItems.length < 3) {
+    const index = Math.floor(Math.random() * numShirts);
+    const selectedItem = shirts[index];
+    if (!selectedItems.some((item) => item.id === selectedItem.id)) {
+      selectedItems.push(selectedItem);
+    }
+  }
+
   return (
     <div className="flex flex-col items-center space-y-8 lg:max-w-[660px]   lg:ml-auto">
-      <img src="./images/logo.png" alt="" />
+      <img src="./imgs/logo.png" alt="" />
       <ShowOrderSummaryTag />
       <HeaderLink />
       <div className="flex flex-col lg:hidden w-full">
-        <NewArivals />
+        {/* <NewArivals /> */}
+        {selectedItems.map((item, index) =>
+          item.type === "shirt" ? (
+            <AddedItems key={index} cartItem={item} isNew={true} />
+          ) : null
+        )}
       </div>
       {/* <Checkouts /> */}
       {/* <div className=" flex flex-col  w-full">

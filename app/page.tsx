@@ -22,7 +22,7 @@ export default function HomePage() {
                 type={shirt.type}
                 quantity={shirt.quantity}
                 name={shirt.name}
-                image={shirt.image}
+                img={shirt.img}
                 tag={shirt.tag}
                 tagName={shirt.tagName}
                 price={shirt.price}
@@ -43,7 +43,7 @@ export default function HomePage() {
                 type={short.type}
                 quantity={short.quantity}
                 name={short.name}
-                image={short.image}
+                img={short.img}
                 tag={short.tag}
                 price={short.price}
                 color={short.color}
@@ -63,7 +63,7 @@ export default function HomePage() {
                 type={best.type}
                 quantity={best.quantity}
                 name={best.name}
-                image={best.image}
+                img={best.img}
                 tag={best.tag}
                 price={best.price}
                 color={best.color}

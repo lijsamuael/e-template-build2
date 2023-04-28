@@ -37,7 +37,7 @@ export default function Card(product: ProductType) {
           </div>
           <div className="self-center">
             <img
-              src={`./images/${product.image}`}
+              src={`./images/${product.img}`}
               alt="k"
               className="2xl:w-[500px]"
             />

@@ -22,7 +22,7 @@ export default function CartItem({
               <div className="w-2/3 flex flex-col bg-gray-100 mx-2 py-2 justify-center ">
                 <div className=" self-center px-4">
                   <img
-                    src={`./images/${card.image}`}
+                    src={`./images/${card.img}`}
                     alt=""
                     className="w-full"
                   />

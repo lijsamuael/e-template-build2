@@ -59,7 +59,7 @@ export default function CardModal(props: CardModalProps) {
                 <h1 className="text-center text-3xl font-bold">{card.name}</h1>
                 <div className="self-center px-4">
                   <img
-                    src={`./images/${card.image}`}
+                    src={`./images/${card.img}`}
                     alt=""
                     className=" 2xl:w-[500px]"
                   />
