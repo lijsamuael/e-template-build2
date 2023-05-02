@@ -26,6 +26,8 @@ export default function Card(product: ProductType) {
   useEffect(() => {
     if (isCartOpen || isOpen) {
       document.body.classList.add("overflow-hidden");
+      document.body.classList.add("max-w-full");
+      document.body.classList.add("overflow-x-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
