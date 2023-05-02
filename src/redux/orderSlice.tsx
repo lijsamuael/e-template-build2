@@ -66,10 +66,25 @@ const cartSlice = createSlice({
       state.totalPrice = action.payload.totalPrice;
       state.amount = action.payload.amount;
     },
+
+    addOrder: (state, action: PayloadAction<ProductType>) => {
+      const itemIndex = state.orderItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (itemIndex === -1) {
+        state.orderItems.push(action.payload);
+        state.amount += 1;
+      } else {
+        state.orderItems[itemIndex].quantity += action.payload.quantity;
+      }
+      const { amount, totalPrice } = calculateCartTotal(state.orderItems);
+      state.amount = amount;
+      state.totalPrice = totalPrice;
+    },
   },
 });
 
-export const { increement, decreement, addByAmount, addToOrder } =
+export const { increement, decreement, addByAmount, addToOrder, addOrder } =
   cartSlice.actions;
 
 export default cartSlice.reducer;

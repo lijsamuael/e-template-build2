@@ -55,7 +55,7 @@ export default function PaymentForm() {
           exclusive via only SMS
         </span>
       </div>
-      <div className="flex justify-between w-full border rounded-lg p-2 ">
+      {/* <div className="flex justify-between w-full border rounded-lg p-2 ">
         <div className="flex justify-start items-center gap-x-2">
           <img src="./icons/leaf.png" alt="" className="w-8 sm:w-16 h-8" />
           <div className="flex flex-col">
@@ -69,11 +69,11 @@ export default function PaymentForm() {
           </div>
         </div>
         <PosterMark />
-      </div>
+      </div> */}
       <div className="flex flex-wrap-reverse justify-between w-full items-center gap-y-4">
         <div className="flex   items-center mx-auto sm:m-1 gap-x-2">
           <img src="./icons/smaller.png" alt="" className="w-4 " />
-          <Link href="/cards" className="text-blue-500">
+          <Link href="/" className="text-blue-500">
             Return to Cart
           </Link>
         </div>

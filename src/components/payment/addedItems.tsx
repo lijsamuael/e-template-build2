@@ -1,6 +1,7 @@
 "use client";
 import ProductType from "@/interface/product";
 import { addToCart } from "@/redux/cartSlice";
+import { addOrder, addToOrder } from "@/redux/orderSlice";
 import { useDispatch } from "react-redux";
 
 export default function AddedItems({
@@ -33,7 +34,10 @@ export default function AddedItems({
         </div>
         {isNew ? (
           <button
-            onClick={() => dispatch(addToCart(cartItem))}
+            onClick={() => {
+              dispatch(addOrder(cartItem));
+              dispatch(addToCart(cartItem));
+            }}
             className="px-8 py-2 bg-secondary-dark1 rounded-md text-white"
           >
             Add

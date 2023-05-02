@@ -22,6 +22,8 @@ export default function CartModal(props: CartModalProps) {
   ) {
     if (
       (event.target as HTMLElement).id === "container" ||
+      (event.target as HTMLElement).id === "goToOrder" ||
+      (event.target as HTMLElement).id === "toOrder" ||
       (event.target as HTMLElement).id === "closeButton"
     ) {
       props.closeCartAction(event);
@@ -69,10 +71,16 @@ export default function CartModal(props: CartModalProps) {
               </div>
               <Link className="" href="/payment">
                 <button
-                  onClick={() => dispatch(addToOrder(cart))}
+                  id="goToOrder"
+                  onClick={() => {
+                    dispatch(addToOrder(cart));
+                    handleCartClose;
+                  }}
                   className="mb-2 w-full py-2  border-2 border-black bg-secondary-dark3 text-white text-xs"
                 >
-                  <button onClick={handleCartClose}>CHECKOUT</button>
+                  <button id="toOrder" onClick={handleCartClose}>
+                    CHECKOUT
+                  </button>
                 </button>
               </Link>
             </div>

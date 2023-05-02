@@ -11,7 +11,7 @@ export default function AdressForm() {
           <select
             name=""
             id=""
-            className="focus:outline-0 bg-white  border-gray-300  text-gray-900  border-l rounded-lg  w-full p-4 flex justify-around appearance-none"
+            className="focus:outline-0 bg-white  border-gray-300  text-gray-900  rounded-lg  w-full p-4 flex justify-around appearance-none"
           >
             <option selected>Country/Region</option>
             {data.countries.map((country, index) => (
@@ -34,7 +34,7 @@ export default function AdressForm() {
                 <input
                   type={data.inputType}
                   placeholder={data.placeholder}
-                  className=" p-4  w-full focus:outline-0 border-l rounded-lg"
+                  className=" p-4  w-full focus:outline-0 border- rounded-lg"
                 />
                 <img src={`./icons/${data.img}`} alt="" className="p-4 w-12" />
               </div>
